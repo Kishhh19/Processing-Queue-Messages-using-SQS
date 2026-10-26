@@ -1,0 +1,9 @@
+/vendor/
+/logs/
+/.env*
+/runtime/
+/evidence/
+*.csv
+*.jsonl
+*.sqlite*
+/credentials*

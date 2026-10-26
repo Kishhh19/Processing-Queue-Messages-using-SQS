@@ -1,0 +1,110 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Queue operations - Sum per minute",
+        "region": "ap-southeast-2",
+        "view": "timeSeries",
+        "period": 60,
+        "stat": "Sum",
+        "metrics": [
+          [
+            "AWS/SQS",
+            "NumberOfMessagesSent",
+            "QueueName",
+            "MarketingEmailQueue-mark-laurence-santos"
+          ],
+          [
+            "AWS/SQS",
+            "NumberOfMessagesReceived",
+            "QueueName",
+            "MarketingEmailQueue-mark-laurence-santos"
+          ],
+          [
+            "AWS/SQS",
+            "NumberOfMessagesDeleted",
+            "QueueName",
+            "MarketingEmailQueue-mark-laurence-santos"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Main queue backlog and in flight - Maximum",
+        "region": "ap-southeast-2",
+        "view": "timeSeries",
+        "period": 60,
+        "stat": "Maximum",
+        "metrics": [
+          [
+            "AWS/SQS",
+            "ApproximateNumberOfMessagesVisible",
+            "QueueName",
+            "MarketingEmailQueue-mark-laurence-santos"
+          ],
+          [
+            "AWS/SQS",
+            "ApproximateNumberOfMessagesNotVisible",
+            "QueueName",
+            "MarketingEmailQueue-mark-laurence-santos"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Oldest message age - seconds",
+        "region": "ap-southeast-2",
+        "view": "timeSeries",
+        "period": 60,
+        "stat": "Maximum",
+        "metrics": [
+          [
+            "AWS/SQS",
+            "ApproximateAgeOfOldestMessage",
+            "QueueName",
+            "MarketingEmailQueue-mark-laurence-santos"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Dead-letter visible backlog",
+        "region": "ap-southeast-2",
+        "view": "timeSeries",
+        "period": 60,
+        "stat": "Maximum",
+        "metrics": [
+          [
+            "AWS/SQS",
+            "ApproximateNumberOfMessagesVisible",
+            "QueueName",
+            "MarketingEmailDLQ-mark-laurence-santos"
+          ]
+        ]
+      }
+    }
+  ]
+}
